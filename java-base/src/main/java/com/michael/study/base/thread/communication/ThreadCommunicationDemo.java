@@ -1,4 +1,4 @@
-package com.michael.study.base.thread.state;
+package com.michael.study.base.thread.communication;
 
 import java.util.concurrent.locks.LockSupport;
 
