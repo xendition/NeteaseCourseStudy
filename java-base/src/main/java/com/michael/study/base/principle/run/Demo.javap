@@ -1,0 +1,157 @@
+Classfile /D:/Develop/Project/Github/study/NeteaseCourseStudy/java-base/target/classes/com/michael/study/base/principle/run/Demo.class
+  Last modified 2019-4-25; size 900 bytes
+  MD5 checksum fe1956cf518ebacde13382706e306feb
+  Compiled from "Demo.java"
+
+public class com.michael.study.base.principle.run.Demo
+  minor version: 0  // 次版本号
+  major version: 52 // 主版本号
+  flags: ACC_PUBLIC, ACC_SUPER // 访问标志
+
+Constant pool: // 常量池 - 类里面包含的静态常量，编译之后就能确定
+   #1 = Methodref          #11.#35        // java/lang/Object."<init>":()V
+   #2 = Fieldref           #36.#37        // java/lang/System.out:Ljava/io/PrintStream;
+   #3 = Methodref          #5.#38         // com/michael/study/base/principle/run/Demo.sum:(II)I
+   #4 = Methodref          #39.#40        // java/io/PrintStream.println:(I)V
+   #5 = Class              #41            // com/michael/study/base/principle/run/Demo
+   #6 = Methodref          #5.#35         // com/michael/study/base/principle/run/Demo."<init>":()V
+   #7 = Methodref          #5.#42         // com/michael/study/base/principle/run/Demo.test:()V
+   #8 = Double             11.0d
+  #10 = Methodref          #39.#43        // java/io/PrintStream.println:(D)V
+  #11 = Class              #44            // java/lang/Object
+  #12 = Utf8               <init>
+  #13 = Utf8               ()V
+  #14 = Utf8               Code
+  #15 = Utf8               LineNumberTable
+  #16 = Utf8               LocalVariableTable
+  #17 = Utf8               this
+  #18 = Utf8               Lcom/michael/study/base/principle/run/Demo;
+  #19 = Utf8               main
+  #20 = Utf8               ([Ljava/lang/String;)V
+  #21 = Utf8               args
+  #22 = Utf8               [Ljava/lang/String;
+  #23 = Utf8               x
+  #24 = Utf8               I
+  #25 = Utf8               y
+  #26 = Utf8               a
+  #27 = Utf8               b
+  #28 = Utf8               sum
+  #29 = Utf8               (II)I
+  #30 = Utf8               test
+  #31 = Utf8               d
+  #32 = Utf8               D
+  #33 = Utf8               SourceFile
+  #34 = Utf8               Demo.java
+  #35 = NameAndType        #12:#13        // "<init>":()V
+  #36 = Class              #45            // java/lang/System
+  #37 = NameAndType        #46:#47        // out:Ljava/io/PrintStream;
+  #38 = NameAndType        #28:#29        // sum:(II)I
+  #39 = Class              #48            // java/io/PrintStream
+  #40 = NameAndType        #49:#50        // println:(I)V
+  #41 = Utf8               com/michael/study/base/principle/run/Demo
+  #42 = NameAndType        #30:#13        // test:()V
+  #43 = NameAndType        #49:#51        // println:(D)V
+  #44 = Utf8               java/lang/Object
+  #45 = Utf8               java/lang/System
+  #46 = Utf8               out
+  #47 = Utf8               Ljava/io/PrintStream;
+  #48 = Utf8               java/io/PrintStream
+  #49 = Utf8               println
+  #50 = Utf8               (I)V
+  #51 = Utf8               (D)V
+{
+  public com.michael.study.base.principle.run.Demo();
+    descriptor: ()V // 隐式构造函数
+    flags: ACC_PUBLIC // 访问标志
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 8: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/michael/study/base/principle/run/Demo;
+
+// 程序入口 main 函数
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V // 方法参数
+    flags: ACC_PUBLIC, ACC_STATIC // 访问标志
+    Code:
+      // 本地变量数量 参数数量 方法对应栈帧中操作数栈的深度
+      stack=3, locals=5, args_size=1
+      指令码偏移量: 操作码(实际存储的是指令码)    值
+         0: sipush        500 // 将 500 压入操作数栈 当前线程执行位置:0
+         3: istore_1          // 将操作数栈栈顶的值 500 保存到本地变量表的1号位置 当前线程执行位置:3
+         4: bipush        100 // 将 100 压入操作数栈 当前线程执行位置:4
+         6: istore_2          // 将操作数栈栈顶的值 100 保存到本地变量表的2号位置 当前线程执行位置:6
+         7: iload_1           // 读取本地变量表 1 号位置的值 500 并压入操作数栈
+         8: iload_2           // 读取本地变量表 2 号位置的值 100 并压入操作数栈
+         9: idiv              // 将操作数栈中的前2个值出栈然后做除法运算，将结果 5 压入操作数栈
+        10: istore_3          // 将操作数栈栈顶的值 5 保存到本地变量表的3号位置 当前线程执行位置:10
+        11: bipush        50  // 将 50 压入操作数栈 当前线程执行位置:11
+        13: istore        4   // 将操作数栈栈顶的值 50 保存到本地变量表的4号位置 当前线程执行位置:13
+        15: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream; // 获取类或者接口字段的值并将其压入操作数栈 其中#2 对应常量池中的#2
+        18: iload_3           // 读取本地变量表 3 号位置的值 5 并压入操作数栈
+        19: iload         4   // 读取本地变量表 4 号位置的值 50 并压入操作数栈
+        21: invokestatic  #3                  // Method sum:(II)I // 执行静态方法调用 sum方法 (JVM会根据方法描述，创建新的栈帧，方法的参数从操作数栈中弹出)
+        24: invokevirtual #4                  // Method java/io/PrintStream.println:(I)V
+        27: new           #5                  // class com/michael/study/base/principle/run/Demo
+        30: dup
+        31: invokespecial #6                  // Method "<init>":()V
+        34: invokevirtual #7                  // Method test:()V // 执行完方法返回main()方法继续执行
+        37: return
+      LineNumberTable:
+        line 12: 0
+        line 13: 4
+        line 15: 7
+        line 16: 11
+        line 18: 15
+        line 20: 27
+        line 21: 37
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      38     0  args   [Ljava/lang/String;
+            4      34     1     x   I
+            7      31     2     y   I
+           11      27     3     a   I
+           15      23     4     b   I
+
+  public static int sum(int, int);
+    descriptor: (II)I
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: iload_0
+         1: iload_1
+         2: iadd
+         3: ireturn
+      LineNumberTable:
+        line 24: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0     a   I
+            0       4     1     b   I
+
+  public void test();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=1
+         0: ldc2_w        #8                  // double 11.0d
+         3: dstore_1
+         4: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;
+         7: dload_1
+         8: invokevirtual #10                 // Method java/io/PrintStream.println:(D)V
+        11: return
+      LineNumberTable:
+        line 28: 0
+        line 29: 4
+        line 30: 11
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      12     0  this   Lcom/michael/study/base/principle/run/Demo;
+            4       8     1     d   D
+}
+SourceFile: "Demo.java"
