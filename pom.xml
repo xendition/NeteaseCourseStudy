@@ -9,6 +9,7 @@
     <version>1.0.0-RELEASE</version>
     <modules>
         <module>java-base</module>
+        <module>java-io</module>
     </modules>
 
     <packaging>pom</packaging>

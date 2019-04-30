@@ -35,7 +35,6 @@ public class ThreadCommunicationDemo {
         // park/unpark 没有顺序要求，但是park并不会释放锁，所有再同步代码中使用要注意
         // demo.parkUnparkOK();
         demo.parkUnparkDeadLock();
-
     }
 
     /** 正常的suspend/resume */
