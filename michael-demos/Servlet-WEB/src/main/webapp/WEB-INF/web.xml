@@ -1,0 +1,36 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Servlet web demo</display-name>
+    
+    <servlet>
+        <servlet-name>ThreadSafeServlet</servlet-name>
+        <servlet-class>com.michael.demos.web.servlet.ThreadSafeServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>ThreadUnSafeServlet</servlet-name>
+        <servlet-class>com.michael.demos.web.servlet.ThreadUnSafeServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>DefaultServlet</servlet-name>
+        <servlet-class>com.michael.demos.web.servlet.DefaultServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ThreadSafeServlet</servlet-name>
+        <url-pattern>/abc</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ThreadUnSafeServlet</servlet-name>
+        <url-pattern>/d</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DefaultServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>

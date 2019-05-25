@@ -10,6 +10,8 @@
     <modules>
         <module>java-base</module>
         <module>java-io</module>
+        <module>michael-demos</module>
+        <module>netty-demo</module>
     </modules>
 
     <packaging>pom</packaging>
