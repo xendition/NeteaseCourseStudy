@@ -15,6 +15,9 @@
         <module>JavaAgent-Demo</module>
         <module>JavaAgent-Use</module>
         <module>Servlet-WEB</module>
+        <module>netty-demo</module>
+        <module>elasticseacrch-demo</module>
+        <module>SpringSecurty-Demo</module>
     </modules>
 
 
