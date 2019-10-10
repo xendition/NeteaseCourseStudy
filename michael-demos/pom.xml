@@ -28,6 +28,8 @@
 		<module>elasticseacrch-demo</module>
 		<module>SpringSecurty-Demo</module>
 		<module>Excel-Demo</module>
+		<module>Common-Demo</module>
+		<module>Spring-Event-Demo</module>
 	</modules>
 
 

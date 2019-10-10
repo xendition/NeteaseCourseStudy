@@ -12,6 +12,7 @@
         <module>java-io</module>
         <module>michael-demos</module>
         <module>michael-examine</module>
+	    <module>michael-docs</module>
     </modules>
 
     <packaging>pom</packaging>
