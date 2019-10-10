@@ -1,0 +1,51 @@
+
+# 1. springboot项目 pom.xml 配置
+
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${spring-boot.version}</version>
+        <configuration>
+            <executable>true</executable>
+        </configuration>
+    <executions>
+        <execution>
+            <goals>
+                <goal>repackage</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+
+
+# 2. 进入配置目录
+
+cd /etc/systemd/system
+
+# 3. 自定义服务文件
+vim my.service
+
+[Unit]
+Description=应用名称
+After=syslog.target
+
+[Service]
+User=root
+ExecStart=/usr/local/java/jdk1.8.0_131/bin/java \
+ -Xmx512m \
+ -jar \
+ jar包绝对路径 \
+ --spring.profiles.active=dev \
+ --server.port=55555 \
+ --spring.redis.host=127.0.0.1 \
+ --spring.redis.password=admin \
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
+
+# 4. 设置开机启动
+systemctl enable my.service
+
+# 刷新配置
+systemctl daemon-reload
