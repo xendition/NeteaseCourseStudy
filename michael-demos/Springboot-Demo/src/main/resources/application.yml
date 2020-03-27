@@ -1,0 +1,42 @@
+
+spring:
+  redis:
+    #    cluster:
+    #      max-redirects: 3
+    #      nodes: 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382,127.0.0.1:6383,127.0.0.1:6384,127.0.0.1:6385
+    database: 0
+    #    host: 127.0.0.1
+    host: 192.168.99.100
+    password: admin
+    lettuce:
+      pool:
+        max-active: 100 # 连接池最大连接数（使用负值表示没有限制）
+        max-idle: 10 # 连接池中的最大空闲连接
+        max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        min-idle: 5 # 连接池中的最小空闲连接
+    port: 6379
+    ssl: false
+    timeout: 1000
+
+logging:
+  level:
+    root: debug
+    sun: info
+    org:
+      springframework:
+        boot:
+          autoconfigure:
+            logging: info
+      apache: info
+
+
+scales:
+  wechat:
+    appid: wx053552e7153b2f1d
+    secret: ac77550198b874c31955e53e6bf418be
+    sns[0]:
+      appid: wx559560038edd1a19
+      secret: 9fb32813207744cc2aa7e76527dac03d
+    sns[1]:
+      appid: wx559560038edd1a19
+      secret: 9fb32813207744cc2aa7e76527dac03d

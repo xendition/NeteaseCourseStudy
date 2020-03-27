@@ -30,6 +30,8 @@
 		<module>Excel-Demo</module>
 		<module>Common-Demo</module>
 		<module>Spring-Event-Demo</module>
+		<module>Blockchain-Demo</module>
+		<module>Springboot-Demo</module>
 	</modules>
 
 
