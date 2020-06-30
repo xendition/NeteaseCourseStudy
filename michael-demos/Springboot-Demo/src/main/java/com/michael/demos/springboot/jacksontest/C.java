@@ -1,10 +1,9 @@
-package com.study.test.su;
+package com.michael.demos.springboot.jacksontest;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 import lombok.experimental.Accessors;
+
+import java.math.BigDecimal;
 
 /**
  * 类功能描述:
@@ -14,15 +13,14 @@ import lombok.experimental.Accessors;
  *
  * @author Michael
  * @version 1.0
- * @date 2019/9/6 11:00
+ * @date 2020/4/10 11:20
  */
-@Getter
-@Setter
-@ToString
+@Data
 @Accessors(chain = true)
-public class SubEntity extends BaseEntity<SubEntity> {
+public class C {
 
     private String name;
+    private Integer age;
 
+    private BigDecimal price;
 }
-

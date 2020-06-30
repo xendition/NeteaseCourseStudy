@@ -32,6 +32,7 @@
 		<module>Spring-Event-Demo</module>
 		<module>Blockchain-Demo</module>
 		<module>Springboot-Demo</module>
+		<module>Mybatis-Demo</module>
 	</modules>
 
 
