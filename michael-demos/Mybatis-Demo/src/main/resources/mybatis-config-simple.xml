@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 引入外部配置文件 -->
+	<properties resource="db-simple.properties"/>
+
+	<settings>
+		<setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+
+	<environments default="default">
+		<environment id="default">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="${jdbc.driver}"/>
+				<property name="url" value="${jdbc.url}"/>
+				<property name="username" value="${jdbc.username}"/>
+				<property name="password" value="${jdbc.password}"/>
+			</dataSource>
+		</environment>
+	</environments>
+
+	<mappers>
+		<!--<mapper resource="mapper/EmployeeMapper.xml"/>-->
+
+		<!-- 配置class 必需 Mapper与Mapper.xml在同一个包中 -->
+		<!--<mapper class="com.michael.demo.mybatis.simple.EmployeeMapper"/>-->
+		<!-- 同 class 需要在同一包中 -->
+		<package name="com.michael.demo.mybatis.simple"/>
+
+	</mappers>
+
+</configuration>
